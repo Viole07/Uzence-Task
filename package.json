@@ -13,7 +13,7 @@
       "test": "vitest",
   "test:ui": "vitest --ui",
   "test:storybook": "vitest --project=storybook",
-  "typecheck": "tsc --noEmit"       // <= run locally/CI if you want type checks
+  "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",

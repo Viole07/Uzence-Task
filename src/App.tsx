@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { InputField } from './components/InputField'
-import { DataTable, Column } from './components/DataTable'
+import { DataTable } from './components/DataTable'
+import type { Column } from './components/DataTable'
 
 type User = { id:number; name:string; email:string; role:string }
 
@@ -21,7 +22,7 @@ export default function App() {
   const [pwd, setPwd] = useState('')
 
   return (
-    <main className="min-h-dvh bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 p-6 space-y-8">
+    <main className="min-h-dvh bg-white text-zinc-900 p-6 space-y-8">
       <header>
         <h1 className="text-2xl font-bold">Frontend Assignment Demo</h1>
         <p className="text-zinc-500">InputField + DataTable (React + TS + Tailwind v4 + Storybook)</p>

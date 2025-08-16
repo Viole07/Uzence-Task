@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50:  #f5f8ff;
+  --color-brand-100: #e9efff;
+  --color-brand-500: #4f46e5;
+  --color-brand-600: #4338ca;
+  --color-brand-700: #3730a3;
+}
+
+/* force light mode */
+:root { color-scheme: light; }
+
+@layer components {
+  .field-base { @apply w-full rounded-xl outline-none transition ring-1 ring-inset; }
+  .field-sm   { @apply text-sm px-3 py-2; }
+  .field-md   { @apply text-base px-3.5 py-2.5; }
+  .field-lg   { @apply text-lg px-4 py-3; }
+
+  /* ---- LIGHT MODE VARIANTS ---- */
+  .field-outlined { @apply bg-white ring-zinc-300 focus:ring-brand-500; }
+  .field-filled   { @apply bg-zinc-100 ring-zinc-200 focus:ring-brand-500; }
+  .field-ghost    { @apply bg-transparent ring-transparent focus:ring-brand-500; }
+
+  /* states */
+  .field-invalid  { @apply ring-red-500 focus:ring-red-600; }
+
+  .label  { @apply mb-1 block text-sm font-medium text-zinc-800; }
+  .helper { @apply mt-1 text-xs text-zinc-500; }
+  .error  { @apply mt-1 text-xs text-red-600; }
+}

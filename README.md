@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+# Uzence Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live App:** `https://uzence-task.vercel.app/`
+**Storybook:** `https://uzence-task-htur.vercel.app/`
+**Repo:** `https://github.com/Viole07/Uzence-Task`
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## Expanding the ESLint configuration
+**Requirements:** Node 20+
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# install
+npm install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# run app
+npm run dev          # http://localhost:5173
+npm run build && npm run preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# storybook
+npm run storybook    # http://localhost:6006
+npm run build-storybook
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# tests
+npm run test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Deploying Storybook to Vercel/Chromatic?
+> Use build command `npm run build-storybook`, output `storybook-static`.
+> On Vercel, set **Install Command** to `npm ci --include=dev` so devDependencies get installed.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Folder structure
+
 ```
+.
+├─ src/
+│  ├─ components/
+│  │  ├─ InputField/
+│  │  │  ├─ InputField.tsx
+│  │  │  └─ InputField.stories.tsx
+│  │  └─ DataTable/
+│  │     ├─ DataTable.tsx
+│  │     └─ DataTable.stories.tsx
+│  ├─ App.tsx
+│  └─ main.tsx
+├─ .storybook/
+│  ├─ main.ts
+│  ├─ preview.ts
+│  └─ vitest.setup.ts
+├─ index.html
+├─ vite.config.ts
+└─ package.json
+```
+
+---
+
+## Approach
+
+* **Stack:** Vite + React + TypeScript + Tailwind **v4** (via `@tailwindcss/vite`) + Storybook 9 + Vitest.
+* **Design:** Light mode only (kept simple; no theme toggle).
+* **Components:**
+
+  * `InputField` — outlined/filled/ghost variants, loading & invalid states, password & clearable options.
+  * `DataTable` — typed columns, selectable rows, simple sortable header, empty state.
+* **Storybook:** Stories cover basic, loading, invalid/empty states; docs & a11y addons enabled.
+* **Testing:** Vitest set up (including Storybook project) for quick regression checks.
+* **Styling:** Tailwind utilities only (no custom config); focus styles and aria labels for accessibility.
+
+---
+
+## Screenshots & GIFs
+
+

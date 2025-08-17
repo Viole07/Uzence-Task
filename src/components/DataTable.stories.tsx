@@ -6,9 +6,9 @@ import type { Column } from './DataTable'   // <-- type-only import (important)
 type User = { id: number; name: string; email: string; role: string }
 
 const rows: User[] = [
-  { id: 1, name: 'Aman', email: 'aman@example.com', role: 'Admin' },
-  { id: 2, name: 'Bhavya', email: 'bhavya@example.com', role: 'User' },
-  { id: 3, name: 'Chirag', email: 'chirag@example.com', role: 'Manager' },
+  { id: 1, name: 'Amaan', email: 'amaan@gmail.com', role: 'Admin' },
+  { id: 2, name: 'Ansh', email: 'ansh@gmail.com', role: 'User' },
+  { id: 3, name: 'Viole', email: 'viole@gmail.com', role: 'Manager' },
 ]
 
 const columns: Column<User>[] = [

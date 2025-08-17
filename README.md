@@ -1,8 +1,8 @@
 # Uzence Frontend Assignment
 
-**Live App:** `https://uzence-task.vercel.app/`
-**Storybook:** `https://uzence-task-htur.vercel.app/`
-**Repo:** `https://github.com/Viole07/Uzence-Task`
+**Live App:** [uzence-task.vercel.app](https://uzence-task.vercel.app)  
+**Storybook:** [uzence-task-htur.vercel.app](https://uzence-task-htur.vercel.app)  
+**Repo:** [github.com/Viole07/Uzence-Task](https://github.com/Viole07/Uzence-Task)
 
 ---
 

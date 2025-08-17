@@ -74,7 +74,11 @@ npm run test
 ## Screenshots & GIFs
 
 ### Input (filled)
-<img src="./docs/screenshots/input-entered.png" alt="Input field – filled" width="900" />
+<a href="./docs/screenshots/input-entered.png">
+  <img src="./docs/screenshots/input-entered.png" alt="Input field – filled" style="width:720px;max-width:100%;display:block;" />
+</a>
 
 ### Table – sorting (GIF)
-<img src="./docs/screenshots/table-sort.gif" alt="Table – sorting" width="520" />
+<a href="./docs/screenshots/table-sort.gif">
+  <img src="./docs/screenshots/table-sort.gif" alt="Table – sorting" style="width:480px;max-width:100%;display:block;" />
+</a>

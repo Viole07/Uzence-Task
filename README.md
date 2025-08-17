@@ -73,4 +73,8 @@ npm run test
 
 ## Screenshots & GIFs
 
+### Input (filled)
+![Input field – filled](./docs/screenshots/input-entered.png)
 
+### Table – sorting (GIF)
+![Table – sorting](./docs/screenshots/table-sort.gif)
